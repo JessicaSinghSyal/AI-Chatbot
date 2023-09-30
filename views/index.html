@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- bootstrap-css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="chat-btn" data-tooltip="Chat with us">
+                    <i class="fa fa-comments"> </i>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="chat-window">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-10">
+                                <div class="chat-container-header text-center">
+                                    <b>CC Bot</b>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <i class="fa fa-close ml-2" onclick="closeChat()"></i>
+                            </div>                            
+                        </div>
+
+                        <!-- container for holding chat messages -->
+                        <div class="conversation"></div>
+                        <!-- /conversation -->
+
+                        <div class="row">
+                            <div class="user-input-box">
+                                <div class="col-12">
+                                    <input type="text" name="user-input" id="user-input" autofocus>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        function closeChat() {
+        $('.chat-window').hide();
+        $('.chat-btn').show();
+    }
+    </script>
+
+</body>
+
+</html>
+
+<template id="bot-msg-template">
+    <div class="row justify-content-start">
+        <div class="col-10">
+            <div class="bot-chat-msg">
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="user-msg-template">
+    <div class="row justify-content-end">
+        <div class="col-10">
+            <div class="user-chat-msg">
+            </div>
+        </div>
+    </div>
+</template>

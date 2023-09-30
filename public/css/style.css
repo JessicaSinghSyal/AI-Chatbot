@@ -1,0 +1,119 @@
+/*
+    CSS for chat button
+*/
+
+  .chat-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0084ff;
+    color: #fff;
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 25px;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1), 0 5px 15px rgba(0,0,0,0.1);
+    transition: all .2s ease-in-out;
+    animation: floating .8s alternate infinite ease-in-out;
+  }
+
+  .chat-btn:hover{
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3), 0 15px 25px rgba(0,0,0,0.3);
+
+  }
+
+  [data-tooltip]:before{
+    border: 1px solid #e1ffc2;
+    background-color: whitesmoke;
+    padding: 5px;
+    line-height: 10px;
+    border-radius: 3px;
+    font-size: 15px;  
+    position: fixed;
+      bottom: 35px;
+      right: 75px;
+      color: black;
+      content: attr(data-tooltip);
+      opacity: 0;
+  }
+  
+  [data-tooltip]:hover::before{
+      opacity: 1;
+  }
+  
+
+/*
+    CSS for chatbot
+*/
+
+.chat-window{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color:#e7dfd5;
+    background-color: #204051;
+    width: 300px;
+    height: 500px;
+    border-radius:15px;
+    padding: 5px;
+}
+
+.chat-container-header{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.conversation{
+    height: 400px;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.bot-chat-msg{
+    float: left;
+    margin: 5px 2px;
+    padding:4px 8px;
+    font-size: small;
+    color: #e7dfd5;
+    background-color: #3b6978;
+    border-radius: 8px;
+    border-top-left-radius:0px ;
+    min-width: 150px;
+}
+
+.user-chat-msg{   
+    float: right;
+    min-width: 30px;
+    margin: 5px 2px;
+    padding:4px 8px;
+    font-size: small;
+    color: #e7dfd5;
+    background-color: #84a9ac;
+    border-radius: 8px;
+    border-bottom-right-radius:0px ;
+}
+
+.user-input-box{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+.chat-window input[type=text] {
+    color: whitesmoke;
+    background-color: #3b6978;
+    width: 100%;
+    padding: 4px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    border-radius: 15px;
+    box-sizing: border-box;
+  }
